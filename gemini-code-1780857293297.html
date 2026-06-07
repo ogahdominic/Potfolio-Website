@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dominic Ogah | Data Analyst & CRM Automation Specialist Portfolio">
+<title>Dominic Ogah | Data Analyst & CRM Automation Specialist</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{
+  --navy: #1A3256; 
+  --navy-mid: #254473; 
+  --navy-light: rgba(26, 50, 86, 0.08); 
+  --navy-glass: rgba(26, 50, 86, 0.05);
+  --crimson: #C82E31; 
+  --crimson-mid: #A82528; 
+  --crimson-light: rgba(200, 46, 49, 0.12);
+  --gold: #D4A84B; 
+  --gold-light: rgba(212, 168, 75, 0.15); 
+  --gold-glass: rgba(212, 168, 75, 0.1);
+  --white: #ffffff; 
+  --offwhite: #F8F9FA; 
+  --offwhite2: #E9ECEF;
+  --text: #1A202C; 
+  --text-mid: #4A5568; 
+  --text-muted: #718096;
+  --border: rgba(26, 50, 86, 0.12); 
+  --border-gold: rgba(212, 168, 75, 0.3);
+}
+body{background:var(--offwhite);font-family:'DM Sans',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden}
+
+/* ANIMATIONS */
+@keyframes slideUpFade{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* GRAPHIC ANIMATIONS */
+.graph-anim { display: flex; align-items: flex-end; gap: 10px; height: 80px; }
+.graph-bar { width: 18px; background: var(--gold); border-radius: 4px 4px 0 0; animation: barGrow 1.5s ease-out infinite alternate; }
+.graph-bar:nth-child(1) { height: 40%; animation-delay: 0s; background: var(--crimson); }
+.graph-bar:nth-child(2) { height: 70%; animation-delay: 0.2s; }
+.graph-bar:nth-child(3) { height: 50%; animation-delay: 0.4s; }
+.graph-bar:nth-child(4) { height: 100%; animation-delay: 0.6s; background: var(--white); }
+@keyframes barGrow { from { transform: scaleY(0.4); } to { transform: scaleY(1); } }
+
+.workflow-anim { display: flex; align-items: center; justify-content: center; gap: 8px; height: 80px; }
+.wf-node { width: 20px; height: 20px; border-radius: 50%; background: var(--crimson); animation: pulseNode 2s infinite; }
+.wf-line { height: 2px; width: 30px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden; }
+.wf-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--gold); animation: flowLine 2s infinite; }
+@keyframes flowLine { 0% { left: -100%; } 100% { left: 100%; } }
+@keyframes pulseNode { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
+
+/* HEADER */
+.header-area{background:linear-gradient(135deg, var(--navy), #0f1e36);padding:0 28px 100px;color:var(--white)}
+.header-inner{max-width:980px;margin:0 auto}
+nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:60px;flex-wrap:wrap;gap:20px}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--white)}
+.logo span{color:var(--crimson)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s ease;cursor:pointer}
+.nav-links a:hover{color:var(--gold)}
+.nav-tabs{display:flex;gap:4px;background:rgba(255,255,255,0.05);border-radius:40px;padding:5px;border:1px solid rgba(255,255,255,0.1)}
+.tab-btn{padding:10px 24px;border-radius:36px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;background:transparent;color:rgba(255,255,255,0.7);transition:all 0.4s}
+.tab-btn.active{background:var(--crimson);color:#white}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:start}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212, 168, 75, 0.15);border:1px solid rgba(212, 168, 75, 0.3);border-radius:30px;padding:6px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:600}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,92px);line-height:0.95;color:var(--white);margin-bottom:22px}
+h1 .accent{color:var(--crimson)}
+h1 .sub{color:var(--gold);font-size:clamp(28px,4.5vw,46px);letter-spacing:4px;display:block}
+.hero-desc{font-size:16px;color:rgba(255,255,255,0.8);line-height:1.75;max-width:500px;font-weight:400;margin-bottom:36px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 30px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:0.5px;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(212, 168, 75, 0.3)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(212, 168, 75, 0.4)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.3);padding:14px 30px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:0.5px;transition:all 0.3s ease}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--white);transform:translateY(-3px)}
+
+.hero-right { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.hero-anim-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; width: 100%; min-width: 140px; display: flex; align-items: center; justify-content: center; }
+.hero-badge-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 24px;text-align:center;width: 100%; box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.hbc-num{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--gold);line-height:1}
+.hbc-label{font-size:11px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:1px;margin-top:4px;font-weight:600}
+.hbc-divider{width:40px;height:2px;background:linear-gradient(90deg,var(--crimson),var(--gold));margin:14px auto}
+
+/* SECTIONS */
+.section{display:none}
+.section.active{display:block}
+.site{max-width:980px;margin:-60px auto 0;padding:0 28px 80px}
+.stats-bar{display:grid;grid-template-columns:repeat(3,1fr);background:var(--crimson);border-radius:12px;padding:36px 0;margin-bottom:68px;box-shadow:0 12px 30px rgba(200, 46, 49, 0.25)}
+.stat{text-align:center;border-right:1px solid rgba(255,255,255,0.2);padding:0 20px}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:#ffffff;line-height:1}
+.stat-label{font-size:13px;color:rgba(255,255,255,0.9);margin-top:6px;font-weight:500}
+
+.sec-header{display:flex;align-items:center;gap:16px;margin-bottom:36px;padding-top:40px}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--navy)}
+.sec-ornament{color:var(--gold);font-size:18px}
+.sec-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+
+/* SERVICE CARDS & SKILLS */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:52px}
+.scard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1)}
+.scard:hover{border-color:var(--navy);box-shadow:0 12px 30px var(--navy-glass);transform:translateY(-4px)}
+.scard:hover .scard-icon{background:var(--navy);color:#white}
+.scard-icon{width:48px;height:48px;border-radius:10px;background:var(--navy-light);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px;color:var(--navy)}
+.scard-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.scard-desc{font-size:13.5px;color:var(--text-muted);line-height:1.7}
+.chip{display:inline-block;background:var(--offwhite);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--text-mid);font-weight:500;margin-top:14px;margin-right:6px}
+
+.skills-wrap{margin-bottom:60px;background:var(--white);padding:32px;border-radius:16px;border:1px solid var(--border);box-shadow:0 8px 25px var(--navy-glass)}
+.skill-row{margin-bottom:18px}
+.skill-row:last-child{margin-bottom:0}
+.skill-meta{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}
+.skill-meta .sname{color:var(--navy);font-weight:600}
+.skill-meta .spct{color:var(--crimson);font-weight:700}
+.skill-bar{height:6px;background:var(--offwhite2);border-radius:6px;overflow:hidden}
+.skill-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--navy),var(--crimson))}
+
+/* PROJECTS */
+.proj-list{display:flex;flex-direction:column;gap:16px;margin-bottom:68px}
+.proj{display:flex;gap:24px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;transition:all 0.4s ease}
+.proj:hover{border-color:var(--gold);box-shadow:0 12px 30px var(--gold-glass);transform:translateX(5px)}
+.proj-num{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--offwhite2);line-height:0.9;min-width:44px}
+.proj:hover .proj-num{color:var(--gold)}
+.proj-body{flex:1}
+.proj-title{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.proj-desc{font-size:14px;color:var(--text-muted);line-height:1.7}
+.proj-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.tag-navy{background:var(--navy-light);border:1px solid rgba(26, 50, 86, 0.15);border-radius:4px;padding:4px 12px;font-size:11px;color:var(--navy);font-weight:600}
+.tag-crimson{background:var(--crimson-light);border:1px solid rgba(200, 46, 49, 0.15);border-radius:4px;padding:4px 12px;font-size:11px;color:var(--crimson-mid);font-weight:600}
+
+/* ABOUT & PROCESS */
+.about-split { display: grid; grid-template-columns: 320px 1fr; gap: 40px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 40px; margin-bottom: 60px; box-shadow: 0 8px 25px var(--navy-glass); }
+.img-placeholder { background: var(--offwhite2); border: 2px dashed var(--text-muted); border-radius: 12px; display: flex; align-items: center; justify-content: center; min-height: 350px; color: var(--text-muted); font-weight: 600; font-size: 14px; text-align: center; }
+.about-content p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
+.about-content p:last-child { margin-bottom: 0; }
+.about-highlight { font-size: 22px; font-family: 'Bebas Neue', sans-serif; color: var(--navy); letter-spacing: 1px; line-height: 1.2; border-left: 3px solid var(--crimson); padding-left: 16px; margin: 20px 0; }
+
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 60px; }
+.p-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 15px var(--navy-glass); }
+.p-step { font-family: 'Bebas Neue'; font-size: 32px; color: var(--gold); margin-bottom: 10px; }
+.p-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.p-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+/* TESTIMONIALS & CONTACT */
+.test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:60px}
+.tcard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:32px;position:relative;box-shadow: 0 4px 15px var(--navy-glass);}
+.stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+.t-text{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:20px;font-style:italic}
+.t-author{display:flex;align-items:center;gap:12px}
+.t-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;}
+.t-info h4{font-size:14px;color:var(--navy)}
+.t-info p{font-size:12px;color:var(--text-muted)}
+
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:30px}
+.ccard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:center}
+.clabel{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;font-weight:600}
+.cval{font-size:15px;font-weight:600;color:var(--navy)}
+.avail{color:var(--crimson);font-weight:600}
+.avail::before{content:'● ';color:var(--gold);animation:blink 2s infinite}
+
+footer{text-align:center;padding:40px 0 0;border-top:1px solid var(--border);margin-top:52px}
+footer p{font-size:13px;color:var(--text-muted);letter-spacing:0.5px}
+footer span{color:var(--navy);font-weight:700}
+
+@media(max-width:850px){
+  nav{flex-direction:column;gap:20px}
+  .nav-links{width:100%;justify-content:center;flex-wrap:wrap}
+}
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  .hero-right{flex-direction:row}
+  .process-grid{grid-template-columns:1fr 1fr} 
+  .about-split{grid-template-columns:1fr} 
+  .test-grid{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .card-grid{grid-template-columns:1fr}
+  .hero-right{flex-direction:column}
+  .stats-bar{grid-template-columns:1fr;padding:24px 0;gap:24px}
+  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:24px}
+  .stat:last-child{border-bottom:none;padding-bottom:0}
+}</style></head><body><div class="bg"></div>
+<header class="header-area">
+  <div class="header-inner">
+    <nav>
+      <div class="logo">DO<span>.</span></div>
+      <div class="nav-links">
+        <a onclick="scrollToSection('about-title')">About</a>
+        <a onclick="scrollToSection('services-title')">Services</a>
+        <a onclick="scrollToSection('tools-title')">Tools</a>
+        <a onclick="scrollToSection('projects-title')">Projects</a>
+        <a onclick="scrollToSection('process-title')">Process</a>
+        <a onclick="scrollToSection('contact-title')">Contact</a>
+      </div>
+      <div class="nav-tabs" role="tablist">
+        <button class="tab-btn active" role="tab" onclick="switchRole('analyst')">Data Analyst</button>
+        <button class="tab-btn" role="tab" onclick="switchRole('crm')">CRM Specialist</button>
+      </div>
+    </nav>
+    <section class="hero" aria-live="polite">
+      <div class="hero-left">
+        <div class="hero-badge" id="badge">Data Analyst</div>
+        <h1><span class="line1">DOMINIC</span><span class="accent">OGAH</span><span class="sub" id="hero-sub">ANALYST</span></h1>
+        <p class="hero-desc" id="hero-desc">Transforming raw data into strategic intelligence — building dashboards, models, and insights that drive decisions with clarity and precision.</p>
+        <div class="cta-row">
+          <button class="btn-gold">Download CV</button>
+          <button class="btn-outline" onclick="scrollToSection('projects-title')">View Projects</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-anim-box">
+          <div id="anim-analyst" class="graph-anim"><div class="graph-bar"></div><div class="graph-bar"></div><div class="graph-bar"></div><div class="graph-bar"></div></div>
+          <div id="anim-crm" class="workflow-anim" style="display:none;"><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div></div>
+        </div>
+        <div class="hero-badge-card">
+          <div class="hbc-num" id="hbc1">50+</div>
+          <div class="hbc-divider"></div>
+          <div class="hbc-label" id="hbc1l">Dashboards</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</header>
+<main class="site">
+  <div class="stats-bar" aria-live="polite">
+    <div class="stat"><div class="stat-num" id="s1">50+</div><div class="stat-label" id="sl1">Dashboards Built</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num" id="s3">120M</div><div class="stat-label" id="sl3">Rows Analyzed</div></div>
+  </div>
+
+  <div id="analyst" class="section active">
+    <div class="sec-header" id="analyst-about-title"><div class="sec-title">ABOUT ME</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="about-split">
+      <div class="img-placeholder"><div>Profile Image Frame<br><span style="font-size:12px;font-weight:400;">(Replace with your portrait)</span></div></div>
+      <div class="about-content">
+        <p>I am a seasoned Data Analyst with over 8 years of experience dedicated to changing how organizations interact with information. My core philosophy is that metrics should never be passive indicators; they must be strategic assets.</p>
+        <p>Throughout my career, I have specialized in parsing heavy, complex datasets into lightweight, actionable executive models. I leverage state-of-the-art tools to capture performance anomalies and unearth growth patterns that keep companies ahead of the curve.</p>
+        <div class="about-highlight">"Data points provide the map. My responsibility is to make sure you can see the route with absolute clarity."</div>
+      </div>
+    </div>
+
+    <div class="sec-header" id="analyst-services-title"><div class="sec-title">WHAT I DO</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="card-grid">
+      <div class="scard"><div class="scard-icon">📊</div><div class="scard-title">Business Intelligence</div><div class="scard-desc">Designing executive dashboards and KPI systems that surface the metrics that matter most.</div><span class="chip">Power BI</span><span class="chip">Tableau</span></div>
+      <div class="scard"><div class="scard-icon">🔍</div><div class="scard-title">Exploratory Analysis</div><div class="scard-desc">Uncovering hidden patterns in complex datasets through rigorous statistical investigation.</div><span class="chip">Python</span><span class="chip">R</span></div>
+      <div class="scard"><div class="scard-icon">🗄️</div><div class="scard-title">Data Engineering</div><div class="scard-desc">Building clean, reliable pipelines from raw sources to production-ready data models.</div><span class="chip">SQL</span><span class="chip">dbt</span></div>
+      <div class="scard"><div class="scard-icon">🤖</div><div class="scard-title">Predictive Modeling</div><div class="scard-desc">Developing forecasting models that give teams a competitive edge with data-driven foresight.</div><span class="chip">Scikit-learn</span><span class="chip">ML</span></div>
+    </div>
+
+    <div class="sec-header" id="analyst-tools-title"><div class="sec-title">CORE SKILLS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="skills-wrap">
+      <div class="skill-row"><div class="skill-meta"><span class="sname">SQL & Data Modeling</span><span class="spct">95%</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Python (Pandas, NumPy)</span><span class="spct">88%</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Power BI & Tableau</span><span class="spct">92%</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Statistical Analysis</span><span class="spct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Excel & Google Sheets</span><span class="spct">97%</span></div><div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div></div>
+    </div>
+
+    <div class="sec-header" id="analyst-projects-title"><div class="sec-title">FEATURED PROJECTS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="proj-list">
+      <div class="proj"><div class="proj-num">01</div><div class="proj-body"><div class="proj-title">Revenue Intelligence Dashboard</div><div class="proj-desc">Built a real-time multi-source revenue tracking system for a fintech, consolidating 12 data streams into one executive view — reducing reporting time by 70%.</div><div class="proj-tags"><span class="tag-navy">Power BI</span><span class="tag-navy">SQL</span><span class="tag-crimson">Azure</span></div></div></div>
+      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">Customer Churn Prediction Model</div><div class="proj-desc">Trained an ML classifier on 2 years of behavioral data, achieving 84% accuracy and enabling proactive retention that saved $1.2M annually.</div><div class="proj-tags"><span class="tag-navy">Python</span><span class="tag-navy">Scikit-learn</span><span class="tag-crimson">Tableau</span></div></div></div>
+      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Supply Chain Analytics Platform</div><div class="proj-desc">Designed end-to-end pipeline and interactive reporting for a logistics firm, cutting inventory waste by 22% through demand forecasting.</div><div class="proj-tags"><span class="tag-navy">dbt</span><span class="tag-navy">Snowflake</span><span class="tag-crimson">Looker</span></div></div></div>
+    </div>
+
+    <div class="sec-header" id="analyst-process-title"><div class="sec-title">MY PROCESS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="process-grid">
+      <div class="p-card"><div class="p-step">01</div><div class="p-title">Discovery</div><div class="p-desc">Understanding your business goals and key data sources.</div></div>
+      <div class="p-card"><div class="p-step">02</div><div class="p-title">Cleaning</div><div class="p-desc">Preparing and structuring raw data for pipeline accuracy.</div></div>
+      <div class="p-card"><div class="p-step">03</div><div class="p-title">Analysis</div><div class="p-desc">Identifying underlying statistical patterns and insights.</div></div>
+      <div class="p-card"><div class="p-step">04</div><div class="p-title">Visualization</div><div class="p-desc">Communicating insights through automated dashboards.</div></div>
+    </div>
+
+    <div class="sec-header"><div class="sec-title">CLIENT TESTIMONIALS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="test-grid">
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Dominic’s dashboards are a work of art and clarity. He transformed how our leadership monitors operational metrics every single morning.</p><div class="t-author"><div class="t-avatar">CO</div><div class="t-info"><h4>Chinedu Okafor</h4><p>Operations Director</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐½</div><p class="t-text">The mathematical rigour Dominic brings to database optimization is incredible. He slashed our manual weekly aggregation loops to seconds.</p><div class="t-author"><div class="t-avatar">SJ</div><div class="t-info"><h4>Sarah Jenkins</h4><p>Data Infrastructure Manager</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐</div><p class="t-text">A sharp mind. He isolated key leakage variables in our logistical supply chain metrics that our baseline systems missed entirely.</p><div class="t-author"><div class="t-avatar">AY</div><div class="t-info"><h4>Amina Yusuf</h4><p>Logistics Department Lead</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Brilliant analyst. The structural dashboard infrastructure he delivered allowed us to confidently scale up our customer retention operations.</p><div class="t-author"><div class="t-avatar">OB</div><div class="t-info"><h4>Olamide Babatunde</h4><p>Managing Director</p></div></div></div>
+    </div>
+  </div>
+
+  <div id="crm" class="section">
+    <div class="sec-header" id="crm-about-title"><div class="sec-title">ABOUT ME</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="about-split">
+      <div class="img-placeholder"><div>Profile Image Frame<br><span style="font-size:12px;font-weight:400;">(Replace with your portrait)</span></div></div>
+      <div class="about-content">
+        <p>I am a CRM Automation Specialist focused on constructing the unified operational systems that scale modern interactions. I transform manual, fractured hand-offs into automated workflows.</p>
+        <p>With 8 years of pipeline engineering experience, I architect internal software ecosystems that align cross-functional teams around a central source of customer truth. I focus on removing administrative overhead so your staff can build human equity.</p>
+        <div class="about-highlight">"Ecosystem automation represents the continuous functional drive that reliably delivers revenue expansion at scale."</div>
+      </div>
+    </div>
+
+    <div class="sec-header" id="crm-services-title"><div class="sec-title">WHAT I DO</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="card-grid">
+      <div class="scard"><div class="scard-icon">⚙️</div><div class="scard-title">Workflow Automation</div><div class="scard-desc">Engineering end-to-end automation flows that eliminate manual tasks and scale customer engagement effortlessly.</div><span class="chip">HubSpot</span><span class="chip">Zapier</span></div>
+      <div class="scard"><div class="scard-icon">🎯</div><div class="scard-title">CRM Strategy</div><div class="scard-desc">Architecting CRM systems that align sales, marketing, and support around a single source of customer truth.</div><span class="chip">Salesforce</span><span class="chip">Zoho</span></div>
+      <div class="scard"><div class="scard-icon">📧</div><div class="scard-title">Email Sequences</div><div class="scard-desc">Crafting intelligent drip campaigns with dynamic segmentation, personalization logic, and A/B-tested messaging.</div><span class="chip">Klaviyo</span><span class="chip">ActiveCampaign</span></div>
+      <div class="scard"><div class="scard-icon">🔗</div><div class="scard-title">API & Integration</div><div class="scard-desc">Connecting disparate platforms through REST API integrations that create unified, real-time data flows.</div><span class="chip">REST API</span><span class="chip">Make.com</span></div>
+    </div>
+
+    <div class="sec-header" id="crm-tools-title"><div class="sec-title">CORE SKILLS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="skills-wrap">
+      <div class="skill-row"><div class="skill-meta"><span class="sname">HubSpot CRM</span><span class="spct">96%</span></div><div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Salesforce Administration</span><span class="spct">87%</span></div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Workflow & Automation Logic</span><span class="spct">93%</span></div><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Email Marketing Automation</span><span class="spct">91%</span></div><div class="skill-bar"><div class="skill-fill" style="width:91%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">API / Zapier / Make</span><span class="spct">82%</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+    </div>
+
+    <div class="sec-header" id="crm-projects-title"><div class="sec-title">FEATURED PROJECTS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="proj-list">
+      <div class="proj"><div class="proj-num">01</div><div class="proj-body"><div class="proj-title">Full HubSpot CRM Overhaul</div><div class="proj-desc">Rebuilt a B2B company's entire CRM architecture — designing 40+ workflows, lead scoring models, and sales pipeline stages, resulting in a 55% increase in qualified pipeline.</div><div class="proj-tags"><span class="tag-navy">HubSpot</span><span class="tag-navy">Lead Scoring</span><span class="tag-crimson">Sequences</span></div></div></div>
+      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">E-Commerce Retention Engine</div><div class="proj-desc">Automated a full post-purchase journey with win-back campaigns, VIP segmentation, and abandoned cart flows — driving a 3.2× increase in repeat purchases.</div><div class="proj-tags"><span class="tag-navy">Klaviyo</span><span class="tag-navy">Shopify</span><span class="tag-crimson">Zapier</span></div></div></div>
+      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Multi-Platform Integration Stack</div><div class="proj-desc">Integrated Salesforce, Slack, Jira, and a custom ERP via REST APIs and Make.com — creating a unified ops layer that eliminated 15+ hours of weekly manual work.</div><div class="proj-tags"><span class="tag-navy">Salesforce</span><span class="tag-navy">Make.com</span><span class="tag-crimson">REST API</span></div></div></div>
+    </div>
+
+    <div class="sec-header" id="crm-process-title"><div class="sec-title">MY PROCESS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="process-grid">
+      <div class="p-card"><div class="p-step">01</div><div class="p-title">Audit</div><div class="p-desc">Mapping out existing user lifecycle paths and blockages.</div></div>
+      <div class="p-card"><div class="p-step">02</div><div class="p-title">Architecture</div><div class="p-desc">Structuring the database layout and event automation logic.</div></div>
+      <div class="p-card"><div class="p-step">03</div><div class="p-title">Integration</div><div class="p-desc">Connecting isolated apps via high-performance REST APIs.</div></div>
+      <div class="p-card"><div class="p-step">04</div><div class="p-title">Optimization</div><div class="p-desc">Iteratively testing and scaling live functional sequences.</div></div>
+    </div>
+
+    <div class="sec-header"><div class="sec-title">CLIENT TESTIMONIALS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="test-grid">
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Dominic completely consolidated our lead routing mechanics. Our sales conversion timelines contracted by nearly 30% inside Q2.</p><div class="t-author"><div class="t-avatar">BA</div><div class="t-info"><h4>Babatunde Adeyemi</h4><p>Commercial Lead</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐½</div><p class="t-text">A top-tier solutions engineer. Dominic synchronized our accounting databases and CRM via custom APIs with total structural integrity.</p><div class="t-author"><div class="t-avatar">EJ</div><div class="t-info"><h4>Edward Jones</h4><p>Marketing Operations Manager</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐</div><p class="t-text">Excellent structural oversight. He systematically cleaned out thousands of duplicate contacts and engineered bulletproof validation rules.</p><div class="t-author"><div class="t-avatar">IN</div><div class="t-info"><h4>Ifeoma Nwachukwu</h4><p>Operations Lead</p></div></div></div>
+      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Our marketing systems finally yield measurable value. Dominic treats automation like a product, and our engagement metrics reflect it.</p><div class="t-author"><div class="t-avatar">OO</div><div class="t-info"><h4>Oluchi Okoro</h4><p>Senior CRM Analyst</p></div></div></div>
+    </div>
+  </div>
+
+  <div class="sec-header" id="contact-title"><div class="sec-title">GET IN TOUCH</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+  <div class="contact-grid">
+    <div class="ccard"><div class="clabel">Email</div><div class="cval">dominic.ogah@email.com</div></div>
+    <div class="ccard"><div class="clabel">LinkedIn</div><div class="cval">linkedin.com/in/dominicogah</div></div>
+    <div class="ccard"><div class="clabel">Location</div><div class="cval">Abuja, Nigeria 🇳🇬</div></div>
+    <div class="ccard"><div class="clabel">Availability</div><div class="cval avail">Open to Projects</div></div>
+  </div>
+
+  <footer>
+    <p>Crafted by <span>Dominic Ogah</span> &nbsp;·&nbsp; Data Analyst & CRM Automation Specialist &nbsp;·&nbsp; Abuja, Nigeria</p>
+  </footer>
+</main>
+
+<script>
+  const cfg = {
+    analyst: {
+      badge: 'Data Analyst',
+      sub: 'ANALYST',
+      desc: 'Transforming raw data into strategic intelligence — building dashboards, models, and insights that drive decisions with clarity and precision.',
+      s1: '50+', sl1: 'Dashboards Built',
+      s3: '120M', sl3: 'Rows Analyzed',
+      hbc1: '50+', hbc1l: 'Dashboards'
+    },
+    crm: {
+      badge: 'CRM Specialist',
+      sub: 'SPECIALIST',
+      desc: 'Engineering intelligent CRM systems and automation workflows that turn customer data into revenue, loyalty, and measurable scale.',
+      s1: '40+', sl1: 'Workflows Built',
+      s3: '3.2×', sl3: 'Avg ROI Delivered',
+      hbc1: '40+', hbc1l: 'Workflows'
+    }
+  };
+
+  let currentTab = 'analyst';
+
+  function switchRole(r) {
+    currentTab = r;
+    const c = cfg[r];
+    
+    document.getElementById('badge').textContent = c.badge;
+    document.getElementById('hero-sub').textContent = c.sub;
+    document.getElementById('hero-desc').textContent = c.desc;
+    document.getElementById('s1').textContent = c.s1;
+    document.getElementById('sl1').textContent = c.sl1;
+    document.getElementById('s3').textContent = c.s3;
+    document.getElementById('sl3').textContent = c.sl3;
+    document.getElementById('hbc1').textContent = c.hbc1;
+    document.getElementById('hbc1l').textContent = c.hbc1l;
+    
+    document.getElementById('anim-analyst').style.display = r === 'analyst' ? 'flex' : 'none';
+    document.getElementById('anim-crm').style.display = r === 'crm' ? 'flex' : 'none';
+
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    setTimeout(() => { document.getElementById(r).classList.add('active'); }, 10);
+    
+    document.querySelectorAll('.tab-btn').forEach((b, i) => {
+      b.classList.toggle('active', (r === 'analyst' && i === 0) || (r === 'crm' && i === 1));
+    });
+  }
+
+  function scrollToSection(idKeyword) {
+    const selector = `${currentTab}-${idKeyword}`;
+    const element = document.getElementById(selector) || document.getElementById(idKeyword);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+</script>
+</body>
+</html>
