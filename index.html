@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dominic Ogah | Data Analyst & CRM Automation Specialist Portfolio">
-<title>Dominic Ogah | Data Analyst & CRM Automation Specialist</title>
+<meta name="description" content="Dominic Ogah | Data Analyst & AI Automation Specialist Portfolio">
+<title>Dominic Ogah | Data Analyst & AI Automation Specialist</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -73,7 +73,7 @@ h1 .accent{color:var(--crimson)}
 h1 .sub{color:var(--gold);font-size:clamp(28px,4.5vw,46px);letter-spacing:4px;display:block}
 .hero-desc{font-size:16px;color:rgba(255,255,255,0.8);line-height:1.75;max-width:500px;font-weight:400;margin-bottom:36px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 30px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:0.5px;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(212, 168, 75, 0.3)}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 30px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:0.5px;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(212, 168, 75, 0.3);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(212, 168, 75, 0.4)}
 .btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.3);padding:14px 30px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:0.5px;transition:all 0.3s ease}
 .btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--white);transform:translateY(-3px)}
@@ -146,19 +146,24 @@ h1 .sub{color:var(--gold);font-size:clamp(28px,4.5vw,46px);letter-spacing:4px;di
 .p-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .p-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-/* TESTIMONIALS & CONTACT */
+/* TESTIMONIALS (Play Store Style) */
 .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:60px}
 .tcard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:32px;position:relative;box-shadow: 0 4px 15px var(--navy-glass);}
-.stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+.playstore-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.playstore-num { font-size: 14px; font-weight: 700; color: var(--navy); }
+.playstore-stars { font-size: 14px; color: var(--gold); letter-spacing: 1px; }
+.playstore-stars-empty { color: #E2E8F0; letter-spacing: 1px; }
 .t-text{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:20px;font-style:italic}
 .t-author{display:flex;align-items:center;gap:12px}
 .t-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;}
 .t-info h4{font-size:14px;color:var(--navy)}
 .t-info p{font-size:12px;color:var(--text-muted)}
 
+/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:30px}
 .ccard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;justify-content:center}
-.clabel{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;font-weight:600}
+.clabel{display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;font-weight:600}
+.clabel svg { width: 14px; height: 14px; }
 .cval{font-size:15px;font-weight:600;color:var(--navy)}
 .avail{color:var(--crimson);font-weight:600}
 .avail::before{content:'● ';color:var(--gold);animation:blink 2s infinite}
@@ -200,7 +205,7 @@ footer span{color:var(--navy);font-weight:700}
       </div>
       <div class="nav-tabs" role="tablist">
         <button class="tab-btn active" role="tab" onclick="switchRole('analyst')">Data Analyst</button>
-        <button class="tab-btn" role="tab" onclick="switchRole('crm')">CRM Specialist</button>
+        <button class="tab-btn" role="tab" onclick="switchRole('ai')">AI Specialist</button>
       </div>
     </nav>
     <section class="hero" aria-live="polite">
@@ -209,14 +214,14 @@ footer span{color:var(--navy);font-weight:700}
         <h1><span class="line1">DOMINIC</span><span class="accent">OGAH</span><span class="sub" id="hero-sub">ANALYST</span></h1>
         <p class="hero-desc" id="hero-desc">Transforming raw data into strategic intelligence — building dashboards, models, and insights that drive decisions with clarity and precision.</p>
         <div class="cta-row">
-          <button class="btn-gold">Download CV</button>
+          <a href="https://canva.link/prhyrvxitzbkyo1" target="_blank" class="btn-gold">Download CV</a>
           <button class="btn-outline" onclick="scrollToSection('projects-title')">View Projects</button>
         </div>
       </div>
       <div class="hero-right">
         <div class="hero-anim-box">
           <div id="anim-analyst" class="graph-anim"><div class="graph-bar"></div><div class="graph-bar"></div><div class="graph-bar"></div><div class="graph-bar"></div></div>
-          <div id="anim-crm" class="workflow-anim" style="display:none;"><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div></div>
+          <div id="anim-ai" class="workflow-anim" style="display:none;"><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div><div class="wf-line"></div><div class="wf-node"></div></div>
         </div>
         <div class="hero-badge-card">
           <div class="hbc-num" id="hbc1">50+</div>
@@ -230,7 +235,7 @@ footer span{color:var(--navy);font-weight:700}
 <main class="site">
   <div class="stats-bar" aria-live="polite">
     <div class="stat"><div class="stat-num" id="s1">50+</div><div class="stat-label" id="sl1">Dashboards Built</div></div>
-    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Years Experience</div></div>
     <div class="stat"><div class="stat-num" id="s3">120M</div><div class="stat-label" id="sl3">Rows Analyzed</div></div>
   </div>
 
@@ -239,7 +244,7 @@ footer span{color:var(--navy);font-weight:700}
     <div class="about-split">
       <img src="images/Dominic.jpeg" alt="Dominic Ogah Profile" class="profile-image">
       <div class="about-content">
-        <p>I am a seasoned Data Analyst with over 8 years of experience dedicated to changing how organizations interact with information. My core philosophy is that metrics should never be passive indicators; they must be strategic assets.</p>
+        <p>I am a seasoned Data Analyst with over 5 years of experience dedicated to changing how organizations interact with information. My core philosophy is that metrics should never be passive indicators; they must be strategic assets.</p>
         <p>Throughout my career, I have specialized in parsing heavy, complex datasets into lightweight, actionable executive models. I leverage state-of-the-art tools to capture performance anomalies and unearth growth patterns that keep companies ahead of the curve.</p>
         <div class="about-highlight">"Data points provide the map. My responsibility is to make sure you can see the route with absolute clarity."</div>
       </div>
@@ -247,9 +252,9 @@ footer span{color:var(--navy);font-weight:700}
 
     <div class="sec-header" id="analyst-services-title"><div class="sec-title">WHAT I DO</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="card-grid">
-      <div class="scard"><div class="scard-icon">📊</div><div class="scard-title">Business Intelligence</div><div class="scard-desc">Designing executive dashboards and KPI systems that surface the metrics that matter most.</div><span class="chip">Power BI</span><span class="chip">Tableau</span></div>
-      <div class="scard"><div class="scard-icon">🔍</div><div class="scard-title">Exploratory Analysis</div><div class="scard-desc">Uncovering hidden patterns in complex datasets through rigorous statistical investigation.</div><span class="chip">Python</span><span class="chip">R</span></div>
-      <div class="scard"><div class="scard-icon">🗄️</div><div class="scard-title">Data Engineering</div><div class="scard-desc">Building clean, reliable pipelines from raw sources to production-ready data models.</div><span class="chip">SQL</span><span class="chip">dbt</span></div>
+      <div class="scard"><div class="scard-icon">📊</div><div class="scard-title">Business Intelligence</div><div class="scard-desc">Designing executive dashboards and KPI systems that surface the metrics that matter most.</div><span class="chip">Power BI</span><span class="chip">Excel</span></div>
+      <div class="scard"><div class="scard-icon">🔍</div><div class="scard-title">Exploratory Analysis</div><div class="scard-desc">Uncovering hidden patterns in complex datasets through rigorous statistical investigation.</div><span class="chip">Python</span><span class="chip">SQL</span></div>
+      <div class="scard"><div class="scard-icon">🗄️</div><div class="scard-title">Data Engineering</div><div class="scard-desc">Building clean, reliable pipelines from raw sources to production-ready data models.</div><span class="chip">SQL</span><span class="chip">ETL</span></div>
       <div class="scard"><div class="scard-icon">🤖</div><div class="scard-title">Predictive Modeling</div><div class="scard-desc">Developing forecasting models that give teams a competitive edge with data-driven foresight.</div><span class="chip">Scikit-learn</span><span class="chip">ML</span></div>
     </div>
 
@@ -257,7 +262,7 @@ footer span{color:var(--navy);font-weight:700}
     <div class="skills-wrap">
       <div class="skill-row"><div class="skill-meta"><span class="sname">SQL & Data Modeling</span><span class="spct">95%</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
       <div class="skill-row"><div class="skill-meta"><span class="sname">Python (Pandas, NumPy)</span><span class="spct">88%</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
-      <div class="skill-row"><div class="skill-meta"><span class="sname">Power BI & Tableau</span><span class="spct">92%</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Power BI</span><span class="spct">92%</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
       <div class="skill-row"><div class="skill-meta"><span class="sname">Statistical Analysis</span><span class="spct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
       <div class="skill-row"><div class="skill-meta"><span class="sname">Excel & Google Sheets</span><span class="spct">97%</span></div><div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div></div>
     </div>
@@ -265,8 +270,8 @@ footer span{color:var(--navy);font-weight:700}
     <div class="sec-header" id="analyst-projects-title"><div class="sec-title">FEATURED PROJECTS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="proj-list">
       <div class="proj"><div class="proj-num">01</div><div class="proj-body"><div class="proj-title">Revenue Intelligence Dashboard</div><div class="proj-desc">Built a real-time multi-source revenue tracking system for a fintech, consolidating 12 data streams into one executive view — reducing reporting time by 70%.</div><div class="proj-tags"><span class="tag-navy">Power BI</span><span class="tag-navy">SQL</span><span class="tag-crimson">Azure</span></div></div></div>
-      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">Customer Churn Prediction Model</div><div class="proj-desc">Trained an ML classifier on 2 years of behavioral data, achieving 84% accuracy and enabling proactive retention that saved $1.2M annually.</div><div class="proj-tags"><span class="tag-navy">Python</span><span class="tag-navy">Scikit-learn</span><span class="tag-crimson">Tableau</span></div></div></div>
-      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Supply Chain Analytics Platform</div><div class="proj-desc">Designed end-to-end pipeline and interactive reporting for a logistics firm, cutting inventory waste by 22% through demand forecasting.</div><div class="proj-tags"><span class="tag-navy">dbt</span><span class="tag-navy">Snowflake</span><span class="tag-crimson">Looker</span></div></div></div>
+      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">Customer Churn Prediction Model</div><div class="proj-desc">Trained an ML classifier on 2 years of behavioral data, achieving 84% accuracy and enabling proactive retention that saved $1.2M annually.</div><div class="proj-tags"><span class="tag-navy">Python</span><span class="tag-navy">Scikit-learn</span><span class="tag-crimson">Power BI</span></div></div></div>
+      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Supply Chain Analytics Platform</div><div class="proj-desc">Designed end-to-end pipeline and interactive reporting for a logistics firm, cutting inventory waste by 22% through demand forecasting.</div><div class="proj-tags"><span class="tag-navy">SQL</span><span class="tag-navy">Snowflake</span><span class="tag-crimson">ETL</span></div></div></div>
     </div>
 
     <div class="sec-header" id="analyst-process-title"><div class="sec-title">MY PROCESS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
@@ -279,75 +284,155 @@ footer span{color:var(--navy);font-weight:700}
 
     <div class="sec-header"><div class="sec-title">CLIENT TESTIMONIALS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="test-grid">
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Dominic’s dashboards are a work of art and clarity. He transformed how our leadership monitors operational metrics every single morning.</p><div class="t-author"><div class="t-avatar">CO</div><div class="t-info"><h4>Chinedu Okafor</h4><p>Operations Director</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐½</div><p class="t-text">The mathematical rigour Dominic brings to database optimization is incredible. He slashed our manual weekly aggregation loops to seconds.</p><div class="t-author"><div class="t-avatar">SJ</div><div class="t-info"><h4>Sarah Jenkins</h4><p>Data Infrastructure Manager</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐</div><p class="t-text">A sharp mind. He isolated key leakage variables in our logistical supply chain metrics that our baseline systems missed entirely.</p><div class="t-author"><div class="t-avatar">AY</div><div class="t-info"><h4>Amina Yusuf</h4><p>Logistics Department Lead</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Brilliant analyst. The structural dashboard infrastructure he delivered allowed us to confidently scale up our customer retention operations.</p><div class="t-author"><div class="t-avatar">OB</div><div class="t-info"><h4>Olamide Babatunde</h4><p>Managing Director</p></div></div></div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">5.0</span>
+          <span class="playstore-stars">★★★★★</span>
+        </div>
+        <p class="t-text">Dominic’s dashboards are a work of art and clarity. He transformed how our leadership monitors operational metrics every single morning.</p>
+        <div class="t-author"><div class="t-avatar">CO</div><div class="t-info"><h4>Chinedu Okafor</h4><p>Operations Director</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">4.5</span>
+          <span class="playstore-stars">★★★★</span><span class="playstore-stars-empty">★</span>
+        </div>
+        <p class="t-text">The mathematical rigour Dominic brings to database optimization is incredible. He slashed our manual weekly aggregation loops to seconds.</p>
+        <div class="t-author"><div class="t-avatar">SJ</div><div class="t-info"><h4>Sarah Jenkins</h4><p>Data Infrastructure Manager</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">4.0</span>
+          <span class="playstore-stars">★★★★</span><span class="playstore-stars-empty">★</span>
+        </div>
+        <p class="t-text">A sharp mind. He isolated key leakage variables in our logistical supply chain metrics that our baseline systems missed entirely.</p>
+        <div class="t-author"><div class="t-avatar">AY</div><div class="t-info"><h4>Amina Yusuf</h4><p>Logistics Department Lead</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">5.0</span>
+          <span class="playstore-stars">★★★★★</span>
+        </div>
+        <p class="t-text">Brilliant analyst. The structural dashboard infrastructure he delivered allowed us to confidently scale up our customer retention operations.</p>
+        <div class="t-author"><div class="t-avatar">OB</div><div class="t-info"><h4>Olamide Babatunde</h4><p>Managing Director</p></div></div>
+      </div>
     </div>
   </div>
 
-  <div id="crm" class="section">
-    <div class="sec-header" id="crm-about-title"><div class="sec-title">ABOUT ME</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+  <div id="ai" class="section">
+    <div class="sec-header" id="ai-about-title"><div class="sec-title">ABOUT ME</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="about-split">
       <img src="images/Dominic.jpeg" alt="Dominic Ogah Profile" class="profile-image">
       <div class="about-content">
-        <p>I am a CRM Automation Specialist focused on constructing the unified operational systems that scale modern interactions. I transform manual, fractured hand-offs into automated workflows.</p>
-        <p>With 8 years of pipeline engineering experience, I architect internal software ecosystems that align cross-functional teams around a central source of customer truth. I focus on removing administrative overhead so your staff can build human equity.</p>
-        <div class="about-highlight">"Ecosystem automation represents the continuous functional drive that reliably delivers revenue expansion at scale."</div>
+        <p>I am an AI Automation Specialist focused on integrating cutting-edge artificial intelligence into everyday business operations. I transform manual, repetitive tasks into intelligent, autonomous workflows.</p>
+        <p>With 5 years of pipeline and systems engineering experience, I architect custom AI agents, LLM wrappers, and seamless API integrations that align cross-functional teams around efficient automated systems. I focus on removing administrative overhead so your staff can focus on high-leverage creative work.</p>
+        <div class="about-highlight">"AI doesn't replace human intuition; it removes the friction so human creativity and business logic can scale effortlessly."</div>
       </div>
     </div>
 
-    <div class="sec-header" id="crm-services-title"><div class="sec-title">WHAT I DO</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="sec-header" id="ai-services-title"><div class="sec-title">WHAT I DO</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="card-grid">
-      <div class="scard"><div class="scard-icon">⚙️</div><div class="scard-title">Workflow Automation</div><div class="scard-desc">Engineering end-to-end automation flows that eliminate manual tasks and scale customer engagement effortlessly.</div><span class="chip">HubSpot</span><span class="chip">Zapier</span></div>
-      <div class="scard"><div class="scard-icon">🎯</div><div class="scard-title">CRM Strategy</div><div class="scard-desc">Architecting CRM systems that align sales, marketing, and support around a single source of customer truth.</div><span class="chip">Salesforce</span><span class="chip">Zoho</span></div>
-      <div class="scard"><div class="scard-icon">📧</div><div class="scard-title">Email Sequences</div><div class="scard-desc">Crafting intelligent drip campaigns with dynamic segmentation, personalization logic, and A/B-tested messaging.</div><span class="chip">Klaviyo</span><span class="chip">ActiveCampaign</span></div>
-      <div class="scard"><div class="scard-icon">🔗</div><div class="scard-title">API & Integration</div><div class="scard-desc">Connecting disparate platforms through REST API integrations that create unified, real-time data flows.</div><span class="chip">REST API</span><span class="chip">Make.com</span></div>
+      <div class="scard"><div class="scard-icon">🤖</div><div class="scard-title">AI Agent Development</div><div class="scard-desc">Building custom AI assistants powered by ChatGPT and Anthropic to handle customer support, triage, and complex queries.</div><span class="chip">OpenAI</span><span class="chip">Anthropic</span></div>
+      <div class="scard"><div class="scard-icon">⚙️</div><div class="scard-title">Intelligent Workflows</div><div class="scard-desc">Architecting automated ecosystems that connect your CRM, emails, and databases using AI-driven logic nodes.</div><span class="chip">Make.com</span><span class="chip">Zapier</span></div>
+      <div class="scard"><div class="scard-icon">🧠</div><div class="scard-title">Custom LLM Integration</div><div class="scard-desc">Integrating language models into your proprietary apps or internal tools for dynamic content generation and analysis.</div><span class="chip">LangChain</span><span class="chip">Python</span></div>
+      <div class="scard"><div class="scard-icon">📚</div><div class="scard-title">RAG & Knowledge Bases</div><div class="scard-desc">Constructing Retrieval-Augmented Generation systems so AI models can securely query your internal company data.</div><span class="chip">Pinecone</span><span class="chip">Vector DBs</span></div>
     </div>
 
-    <div class="sec-header" id="crm-tools-title"><div class="sec-title">CORE SKILLS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="sec-header" id="ai-tools-title"><div class="sec-title">CORE SKILLS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="skills-wrap">
-      <div class="skill-row"><div class="skill-meta"><span class="sname">HubSpot CRM</span><span class="spct">96%</span></div><div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div></div>
-      <div class="skill-row"><div class="skill-meta"><span class="sname">Salesforce Administration</span><span class="spct">87%</span></div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div></div>
-      <div class="skill-row"><div class="skill-meta"><span class="sname">Workflow & Automation Logic</span><span class="spct">93%</span></div><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
-      <div class="skill-row"><div class="skill-meta"><span class="sname">Email Marketing Automation</span><span class="spct">91%</span></div><div class="skill-bar"><div class="skill-fill" style="width:91%"></div></div></div>
-      <div class="skill-row"><div class="skill-meta"><span class="sname">API / Zapier / Make</span><span class="spct">82%</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">LLM Prompt Engineering</span><span class="spct">96%</span></div><div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Make.com / Zapier Automation</span><span class="spct">93%</span></div><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">Python & API Integration</span><span class="spct">89%</span></div><div class="skill-bar"><div class="skill-fill" style="width:89%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">AI Chatbot Development</span><span class="spct">91%</span></div><div class="skill-bar"><div class="skill-fill" style="width:91%"></div></div></div>
+      <div class="skill-row"><div class="skill-meta"><span class="sname">RAG & Vector Databases</span><span class="spct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
     </div>
 
-    <div class="sec-header" id="crm-projects-title"><div class="sec-title">FEATURED PROJECTS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="sec-header" id="ai-projects-title"><div class="sec-title">FEATURED PROJECTS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="proj-list">
-      <div class="proj"><div class="proj-num">01</div><div class="proj-body"><div class="proj-title">Full HubSpot CRM Overhaul</div><div class="proj-desc">Rebuilt a B2B company's entire CRM architecture — designing 40+ workflows, lead scoring models, and sales pipeline stages, resulting in a 55% increase in qualified pipeline.</div><div class="proj-tags"><span class="tag-navy">HubSpot</span><span class="tag-navy">Lead Scoring</span><span class="tag-crimson">Sequences</span></div></div></div>
-      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">E-Commerce Retention Engine</div><div class="proj-desc">Automated a full post-purchase journey with win-back campaigns, VIP segmentation, and abandoned cart flows — driving a 3.2× increase in repeat purchases.</div><div class="proj-tags"><span class="tag-navy">Klaviyo</span><span class="tag-navy">Shopify</span><span class="tag-crimson">Zapier</span></div></div></div>
-      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Multi-Platform Integration Stack</div><div class="proj-desc">Integrated Salesforce, Slack, Jira, and a custom ERP via REST APIs and Make.com — creating a unified ops layer that eliminated 15+ hours of weekly manual work.</div><div class="proj-tags"><span class="tag-navy">Salesforce</span><span class="tag-navy">Make.com</span><span class="tag-crimson">REST API</span></div></div></div>
+      <div class="proj"><div class="proj-num">01</div><div class="proj-body"><div class="proj-title">Autonomous Support Agent</div><div class="proj-desc">Deployed a custom OpenAI-powered chatbot trained on a company's historical ticket data, successfully resolving 45% of Tier-1 support queries instantly without human intervention.</div><div class="proj-tags"><span class="tag-navy">OpenAI API</span><span class="tag-navy">Pinecone</span><span class="tag-crimson">Python</span></div></div></div>
+      <div class="proj"><div class="proj-num">02</div><div class="proj-body"><div class="proj-title">Automated Content & Social Pipeline</div><div class="proj-desc">Architected a Make.com workflow that monitors industry news, drafts tailored LinkedIn posts via Claude 3, and queues them for human review — saving the marketing team 15 hours weekly.</div><div class="proj-tags"><span class="tag-navy">Make.com</span><span class="tag-navy">Anthropic</span><span class="tag-crimson">Airtable</span></div></div></div>
+      <div class="proj"><div class="proj-num">03</div><div class="proj-body"><div class="proj-title">Internal Operations Co-Pilot</div><div class="proj-desc">Integrated Slack, Jira, and a custom ERP via REST APIs to create a conversational Slackbot. Employees can simply ask the bot for project statuses, which queries the database in real-time.</div><div class="proj-tags"><span class="tag-navy">LangChain</span><span class="tag-navy">Slack API</span><span class="tag-crimson">Node.js</span></div></div></div>
     </div>
 
-    <div class="sec-header" id="crm-process-title"><div class="sec-title">MY PROCESS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
+    <div class="sec-header" id="ai-process-title"><div class="sec-title">MY PROCESS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="process-grid">
-      <div class="p-card"><div class="p-step">01</div><div class="p-title">Audit</div><div class="p-desc">Mapping out existing user lifecycle paths and blockages.</div></div>
-      <div class="p-card"><div class="p-step">02</div><div class="p-title">Architecture</div><div class="p-desc">Structuring the database layout and event automation logic.</div></div>
-      <div class="p-card"><div class="p-step">03</div><div class="p-title">Integration</div><div class="p-desc">Connecting isolated apps via high-performance REST APIs.</div></div>
-      <div class="p-card"><div class="p-step">04</div><div class="p-title">Optimization</div><div class="p-desc">Iteratively testing and scaling live functional sequences.</div></div>
+      <div class="p-card"><div class="p-step">01</div><div class="p-title">Audit</div><div class="p-desc">Mapping out existing manual bottlenecks and workflows.</div></div>
+      <div class="p-card"><div class="p-step">02</div><div class="p-title">Logic Design</div><div class="p-desc">Structuring the API routes, triggers, and AI prompt architecture.</div></div>
+      <div class="p-card"><div class="p-step">03</div><div class="p-title">Integration</div><div class="p-desc">Connecting isolated tools to a centralized AI reasoning engine.</div></div>
+      <div class="p-card"><div class="p-step">04</div><div class="p-title">Optimization</div><div class="p-desc">Iteratively testing edge cases to ensure hallucination-free output.</div></div>
     </div>
 
     <div class="sec-header"><div class="sec-title">CLIENT TESTIMONIALS</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
     <div class="test-grid">
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Dominic completely consolidated our lead routing mechanics. Our sales conversion timelines contracted by nearly 30% inside Q2.</p><div class="t-author"><div class="t-avatar">BA</div><div class="t-info"><h4>Babatunde Adeyemi</h4><p>Commercial Lead</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐½</div><p class="t-text">A top-tier solutions engineer. Dominic synchronized our accounting databases and CRM via custom APIs with total structural integrity.</p><div class="t-author"><div class="t-avatar">EJ</div><div class="t-info"><h4>Edward Jones</h4><p>Marketing Operations Manager</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐</div><p class="t-text">Excellent structural oversight. He systematically cleaned out thousands of duplicate contacts and engineered bulletproof validation rules.</p><div class="t-author"><div class="t-avatar">IN</div><div class="t-info"><h4>Ifeoma Nwachukwu</h4><p>Operations Lead</p></div></div></div>
-      <div class="tcard"><div class="stars">⭐⭐⭐⭐⭐</div><p class="t-text">Our marketing systems finally yield measurable value. Dominic treats automation like a product, and our engagement metrics reflect it.</p><div class="t-author"><div class="t-avatar">OO</div><div class="t-info"><h4>Oluchi Okoro</h4><p>Senior CRM Analyst</p></div></div></div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">5.0</span>
+          <span class="playstore-stars">★★★★★</span>
+        </div>
+        <p class="t-text">Dominic completely modernized our backend operations. The automated data parsing agent he built saves us practically an entire day of manual entry each week.</p>
+        <div class="t-author"><div class="t-avatar">BA</div><div class="t-info"><h4>Babatunde Adeyemi</h4><p>Commercial Lead</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">4.5</span>
+          <span class="playstore-stars">★★★★</span><span class="playstore-stars-empty">★</span>
+        </div>
+        <p class="t-text">A top-tier AI solutions engineer. Dominic synchronized our proprietary databases with an LLM wrapper with absolute structural integrity and security.</p>
+        <div class="t-author"><div class="t-avatar">EJ</div><div class="t-info"><h4>Edward Jones</h4><p>Operations Manager</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">4.0</span>
+          <span class="playstore-stars">★★★★</span><span class="playstore-stars-empty">★</span>
+        </div>
+        <p class="t-text">Excellent structural oversight. He systematically engineered a knowledge base that finally makes our chaotic internal documentation searchable via natural language.</p>
+        <div class="t-author"><div class="t-avatar">IN</div><div class="t-info"><h4>Ifeoma Nwachukwu</h4><p>Operations Lead</p></div></div>
+      </div>
+      <div class="tcard">
+        <div class="playstore-rating">
+          <span class="playstore-num">5.0</span>
+          <span class="playstore-stars">★★★★★</span>
+        </div>
+        <p class="t-text">Our customer interactions finally yield measurable scale. Dominic treats AI automation like a precise science, and our engagement metrics reflect it.</p>
+        <div class="t-author"><div class="t-avatar">OO</div><div class="t-info"><h4>Oluchi Okoro</h4><p>Senior Support Lead</p></div></div>
+      </div>
     </div>
   </div>
 
   <div class="sec-header" id="contact-title"><div class="sec-title">GET IN TOUCH</div><div class="sec-ornament">✦</div><div class="sec-line"></div></div>
   <div class="contact-grid">
-    <div class="ccard"><div class="clabel">Email</div><div class="cval">dominic.ogah@email.com</div></div>
-    <div class="ccard"><div class="clabel">LinkedIn</div><div class="cval">linkedin.com/in/dominicogah</div></div>
-    <div class="ccard"><div class="clabel">Location</div><div class="cval">Abuja, Nigeria 🇳🇬</div></div>
-    <div class="ccard"><div class="clabel">Availability</div><div class="cval avail">Open to Projects</div></div>
+    <div class="ccard">
+      <div class="clabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Email
+      </div>
+      <div class="cval">ojimogah@gmail.com</div>
+    </div>
+    <div class="ccard">
+      <div class="clabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        LinkedIn
+      </div>
+      <div class="cval">linkedin.com/in/dominicogah</div>
+    </div>
+    <div class="ccard">
+      <div class="clabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Location
+      </div>
+      <div class="cval">Abuja, Nigeria 🇳🇬</div>
+    </div>
+    <div class="ccard">
+      <div class="clabel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        Availability
+      </div>
+      <div class="cval avail">Open to Projects</div>
+    </div>
   </div>
 
   <footer>
-    <p>Crafted by <span>Dominic Ogah</span> &nbsp;·&nbsp; Data Analyst & CRM Automation Specialist &nbsp;·&nbsp; Abuja, Nigeria</p>
+    <p>Crafted by <span>Dominic Ogah</span> &nbsp;·&nbsp; Data Analyst & AI Automation Specialist &nbsp;·&nbsp; Abuja, Nigeria</p>
   </footer>
 </main>
 
@@ -361,13 +446,13 @@ footer span{color:var(--navy);font-weight:700}
       s3: '120M', sl3: 'Rows Analyzed',
       hbc1: '50+', hbc1l: 'Dashboards'
     },
-    crm: {
-      badge: 'CRM Specialist',
-      sub: 'SPECIALIST',
-      desc: 'Engineering intelligent CRM systems and automation workflows that turn customer data into revenue, loyalty, and measurable scale.',
-      s1: '40+', sl1: 'Workflows Built',
-      s3: '3.2×', sl3: 'Avg ROI Delivered',
-      hbc1: '40+', hbc1l: 'Workflows'
+    ai: {
+      badge: 'AI Automation Specialist',
+      sub: 'AI SPECIALIST',
+      desc: 'Designing intelligent AI workflows and automation agents that eliminate manual tasks and scale your business operations effortlessly.',
+      s1: '30+', sl1: 'AI Workflows Built',
+      s3: '500+', sl3: 'Hours Saved/Mo',
+      hbc1: '30+', hbc1l: 'AI Workflows'
     }
   };
 
@@ -388,13 +473,13 @@ footer span{color:var(--navy);font-weight:700}
     document.getElementById('hbc1l').textContent = c.hbc1l;
     
     document.getElementById('anim-analyst').style.display = r === 'analyst' ? 'flex' : 'none';
-    document.getElementById('anim-crm').style.display = r === 'crm' ? 'flex' : 'none';
+    document.getElementById('anim-ai').style.display = r === 'ai' ? 'flex' : 'none';
 
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     setTimeout(() => { document.getElementById(r).classList.add('active'); }, 10);
     
     document.querySelectorAll('.tab-btn').forEach((b, i) => {
-      b.classList.toggle('active', (r === 'analyst' && i === 0) || (r === 'crm' && i === 1));
+      b.classList.toggle('active', (r === 'analyst' && i === 0) || (r === 'ai' && i === 1));
     });
   }
 
